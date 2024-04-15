@@ -103,6 +103,16 @@ const ManagePage = () => {
     writeContract({
       address: MusicContractAddress ,
       abi:sportAbi,
+      functionName: 'deleteArtistCover',
+      args: [itemId],
+    });
+  };
+  const handleConfirm = (itemId: number) => {
+    // Call your function here
+    console.log("Removing item with ID:", itemId);
+    writeContract({
+      address: MusicContractAddress ,
+      abi:sportAbi,
       functionName: 'approveArtistReleased',
       args: [itemId],
     });
@@ -127,7 +137,7 @@ const ManagePage = () => {
       
       
       <div className="w-full">
-            <ManageCard data={dataArray}  onRemove={handleRelease}/>
+            <ManageCard data={dataArray}  onRemove={handleRelease} Release={handleConfirm}/>
           </div>
     </div>
   );
