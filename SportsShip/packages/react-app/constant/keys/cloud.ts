@@ -1,0 +1,4 @@
+
+export const CLOUDINARY_API_KEY = "788576362497747"
+export const CLOUDINARY_API_SECRET = "5lKkJOcAFrQgkNuqU1FLv-HC0KM"
+export const CLOUDINARY_NAME = "dm4mti2gt"

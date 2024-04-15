@@ -1,0 +1,251 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "bidPlayer",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_playerName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_playerURL",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_playerYear",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_playerSportsType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_playerPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_playerExperienceRate",
+				"type": "uint256"
+			}
+		],
+		"name": "createPlayer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllPlayers",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "playerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "playerName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "playerOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "playerUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "playerYears",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sportsType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "playerPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "playerExperienceRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isBid",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct SportsmanShip.Player[]",
+				"name": "play",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_ownerAddress",
+				"type": "address"
+			}
+		],
+		"name": "getUsePlayers",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "playerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "playerName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "playerOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "playerUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "playerYears",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sportsType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "playerPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "playerExperienceRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isBid",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct SportsmanShip.Player[]",
+				"name": "plays",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "players",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "playerId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "playerName",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "playerOwner",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "playerUrl",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "playerYears",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "sportsType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "playerPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "playerExperienceRate",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "isBid",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "removeItem",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
