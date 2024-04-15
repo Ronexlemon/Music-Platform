@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+
 import { useWriteContract } from "wagmi";
 import { MusicContractAddress } from "@/constant/address";
 import MusicAbi from "../../constant/abi/music.json"
@@ -117,18 +116,7 @@ const CreateForm = () => {
             </button>
           </div>
         </form>
-        {openProgress &&(
-             <div className="flex justify-center items-center absolute top-1/2 bg-white h-1/4 w-1/4">
-             <Box sx={{ display: 'flex' }}>
-             <CircularProgress color="secondary" />
-     <CircularProgress color="success" />
-     <CircularProgress color="inherit" />
-     <h1>Loading ...</h1>
-         </Box>
-     
-             </div>
-
-        )}
+        
        
       </div>
     </>
