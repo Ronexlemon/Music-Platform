@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { useWriteContract } from "wagmi";
-import { SportManshipContractAddress } from "@/constant/address";
-import SportAbi from "../../constant/abi/music.json"
+import { MusicContractAddress } from "@/constant/address";
+import MusicAbi from "../../constant/abi/music.json"
 import cloudinary from "@/utils/cloudinary";
 import { convertBase64 } from "@/utils/converttobase64";
 import { ethers } from "ethers";
@@ -23,12 +23,12 @@ const CreateForm = () => {
         console.log("please upload image")
         return;
       }
-      //string memory _playerName,string memory _playerURL,string memory _playerYear,string memory _playerSportsType,uint256 _playerPrice,uint _playerExperienceRate//
+      //string memory _artistName,string memory _artistURL,string memory _artistYear,string memory _artistSongType,uint256 _artistPrice,string memory _artistSongRate,string memory _artistSongName
       writeContract({
-        address: SportManshipContractAddress ,
-        abi:SportAbi,
-        functionName: 'createPlayer',
-        args: [formData.playerName,imageUrl.url, formData.playerYears, formData.sportsType, ethers.utils.parseEther(formData.playerPrice),formData.playerExperienceRate],
+        address: MusicContractAddress,
+        abi:MusicAbi,
+        functionName: 'createArtistCover',
+        args: [formData.artistName,imageUrl.url, formData.artistYear, formData.artistSongType, ethers.utils.parseEther(formData.artistPrice),formData.artistSongRate,formData.artistSongName],
       });
   
       console.log("Image uploaded successfully. Image URL:", imageUrl.url);
@@ -39,70 +39,70 @@ const CreateForm = () => {
     }
   
     };
-  // uint  playerId;
-// address playerOwner;
-// string playerUrl;
-//string playerName;
-// string playerYears;
-// string sportsType;
-// uint playerPrice;
-// uint playerExperienceRate;
-// bool  isBid;
-
+ 
   return (
     <>
       <div className="h-screen  w-screen flex justify-center items-center relative">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-1/2 h-3/4 flex flex-col justify-around bg-hero rounded-2xl "
+          className="w-1/2 h-3/4 flex flex-col justify-around bg-hero  rounded-full  "
         >
             <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Upload Image</label>
+            <label className="text-orange-500">Cover Image</label>
             <input type="file" className="w-1/2  h-10 rounded-2xl bg-slate-200" {...register("image", { required: true })} />
           </div>
           <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Full Name</label>
+            <label className="text-white">Artist Name</label>
             <input
               type="text"
               placeholder="Messi"
               className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
-              {...register("playerName", { required: true })}
+              {...register("artistName", { required: true })}
             />
           </div>
           <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Player Value</label>
+            <label className="text-white">Release Year</label>
             <input
               type="number"
-              placeholder="$ 1"
+              placeholder="2012"
               className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
-              {...register("playerPrice", { required: true })}
+              {...register("artistYear", { required: true })}
             />
           </div>
           <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Sports Type</label>
+            <label className="text-white">Song Type</label>
             <input
               type="text"
-              placeholder="Football"
+              placeholder="Hip hop"
               className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
-              {...register("sportsType", { required: true })}
+              {...register("artistSongType", { required: true })}
             />
           </div>
           <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Years of Exp</label>
+            <label className="text-white">Cover Price</label>
             <input
               type="number"
-              placeholder="4.5"
+              placeholder="$1"
               className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
-              {...register("playerExperienceRate", { required: true })}
+              {...register("artistPrice", { required: true })}
             />
           </div>
           <div className="flex justify-around items-center mt-2">
-            <label className="text-white">Age</label>
+            <label className="text-white">Song Rate</label>
             <input
               type="number"
-              placeholder="38"
+              placeholder="4"
               className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
-              {...register("playerYears", { required: true })}
+              {...register("artistSongRate", { required: true })}
+            />
+          </div>
+          <div className="flex justify-around items-center mt-2">
+            <label className="text-white">Song Name</label>
+            <input
+              type="text"
+              placeholder="Never"
+              className="w-1/2 bg-slate-200 text-center h-10 rounded-2xl"
+              {...register("artistSongName", { required: true })}
             />
           </div>
           
@@ -111,7 +111,7 @@ const CreateForm = () => {
           <div className="flex justify-end mr-10 items-center mt-2 text-white">
             <button 
               type="submit"
-              className="bg-green-500 w-16 h-10 rounded-xl "
+              className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% w-16 h-10 rounded-xl "
             >
               Submit
             </button>

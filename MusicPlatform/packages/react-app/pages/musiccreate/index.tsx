@@ -3,8 +3,8 @@ import type { NextPageWithLayout } from '../_app'
 import LandLayout from "@/components/LandLayout";
 import LandingPage from "@/components/pages/LandingPage";
 import Layout from "@/components/Layout";
-import ManagePage from "@/components/pages/managepage";
-import CreateForm from "@/components/pages/CreatePage";
+import ManagePage from "@/components/pages/ManageMusicPage";
+import CreateForm from "@/components/pages/CreateMusicCoverPage";
 import CreateLayout from "@/components/createLayout";
 
 const Create = ()=>{

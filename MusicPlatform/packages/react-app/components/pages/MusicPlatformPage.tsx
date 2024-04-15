@@ -3,15 +3,15 @@ import { useAccount,useReadContract,useWriteContract } from "wagmi";
 import { useForm } from "react-hook-form";
 import { data } from "@/constant/data";
 import MarketCard, { CardData, CardProps } from "@/components/Card";
-import sportsABI from "../../constant/abi/music.json"
-import { SportManshipContractAddress } from "@/constant/address";
+import musicABI from "../../constant/abi/music.json"
+import { MusicContractAddress } from "@/constant/address";
 
 import { uploadImage, uploadImageAndGetUrl } from "@/upload/uploadImage";
 import cloudinary from "@/utils/cloudinary";
 import { convertBase64 } from "@/utils/converttobase64";
 
 import { ethers } from "ethers";
-import SportCardCard from "../SportsCenterCard";
+import SportCardCard from "../MusicCenterCard";
 
 // uint  playerId;
 // address playerOwner;
@@ -22,43 +22,45 @@ import SportCardCard from "../SportsCenterCard";
 // uint playerExperienceRate;
 // bool  isBid;
 
-export interface PlayerDetail {
-    playerId: number;
-    playerOwner: string; 
-    playerName:string;
-    playerUrl:string;
-    playerYears: string;
-    sportsType: string;
-    playerPrice: number;
-    playerExperienceRate: number;
-    isBid: boolean;
-    
+export interface MusicDetail {
+  artistId: number;
+  artistName: string; 
+  artistSongName: string;
+  artistOwner: string;
+  artistUrl: string;
+  artistYears: string;
+  artistPrice: number; // Changed from uint to number
+  songType: string;
+  artistSongRate: string;
+  isReleased: boolean;
 }
 
-const playerData: PlayerDetail[] = [
-    {
-        playerId: 1,
-        playerOwner: "0x1234567890123456789012345678901234567890",
-        playerUrl: "https://example.com/player1",
-        playerYears: "5 years",
-        playerName:"messi",
-        sportsType: "Football",
-        playerPrice: 10000, // Assuming the price is in wei
-        playerExperienceRate: 4.5,
-        isBid: false
-    },
-    {
-        playerId: 2,
-        playerOwner: "0x0987654321098765432109876543210987654321",
-        playerUrl: "https://example.com/player2",
-        playerYears: "3 years",
-        playerName:"messi",
-        sportsType: "Basketball",
-        playerPrice: 80000, // Assuming the price is in wei
-        playerExperienceRate: 3.8,
-        isBid: true
-    },
-    // Add more player data objects as needed
+const musicData: MusicDetail[] = [
+  {
+    artistId: 1,
+    artistName: "Artist 1",
+    artistSongName: "Song 1",
+    artistOwner: "Owner 1",
+    artistUrl: "https://example.com/artist1",
+    artistYears: "3 years",
+    artistPrice: 10000, // Example price in wei
+    songType: "Pop",
+    artistSongRate: "4.5",
+    isReleased: true
+  },
+  {
+    artistId: 2,
+    artistName: "Artist 2",
+    artistSongName: "Song 2",
+    artistOwner: "Owner 2",
+    artistUrl: "https://example.com/artist2",
+    artistYears: "5 years",
+    artistPrice: 80000, // Example price in wei
+    songType: "Rock",
+    artistSongRate: "4.2",
+    isReleased: false
+  },
+  // Add more music data objects as needed
 ];
 
 const SportCenter = () => {
@@ -73,16 +75,16 @@ const SportCenter = () => {
   
 
   const itemdata = useReadContract({
-    abi:sportsABI,
-    address: SportManshipContractAddress,
-    functionName: 'getAllPlayers',
+    abi:musicABI,
+    address: MusicContractAddress,
+    functionName: 'allArtists',
     
 
   })
   
   
 
-  const dataArray:PlayerDetail[] = Array.isArray(itemdata.data) ? itemdata.data : [];
+  const dataArray:MusicDetail[] = Array.isArray(itemdata.data) ? itemdata.data : [];
   console.log("the data is data data array contract",dataArray)
 
   const testIt =()=>{
@@ -94,8 +96,8 @@ const SportCenter = () => {
     // Call your function here
     console.log("Removing item with ID:", itemId);
     writeContract({
-      address: SportManshipContractAddress,
-      abi:sportsABI,
+      address: MusicContractAddress,
+      abi:musicABI,
       functionName: 'bidPlayer',
       args: [itemId],
     });

@@ -29,8 +29,8 @@ module.exports = {
         "lavender": "#B490FF"
       },
       backgroundImage:{
-        "hero": "url('/images/sportman.jpeg')",
-        "hero-two": "url('/images/sports2.webp')",
+        "hero": "url('/images/music.jpeg')",
+        "hero-two": "url('/images/music3.jpeg')",
       }
     },
   },

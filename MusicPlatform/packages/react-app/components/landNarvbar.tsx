@@ -20,7 +20,7 @@ export default function HomeNarbar() {
     }, []);
 
     return (
-        <Disclosure as="nav" className="bg-gradient-to-r  from-indigo-500 to-cyan-500 border-b border-black">
+        <Disclosure as="nav" className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% border-b border-black">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -51,14 +51,14 @@ export default function HomeNarbar() {
                                
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                     
-                                  <h1    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900" >SPORTSMANSHIP </h1>
+                                  <h1    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900" >HOMEOFENTERTAIMENT </h1>
                                     
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-    <div className="bg-gradient-to-r  from-violet-500 to-fuchsia-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-        <Link href="/sportcenter">
-            Get Started
+    <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-bold py-2 px-4 border border-blue-700 rounded">
+        <Link href="/musicpalace">
+            Lets Dance
         </Link>
     </div>
 </div>

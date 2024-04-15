@@ -21,7 +21,7 @@ export type CardProps2 = {
   onRemove: (itemId: number) => void;
 };
 
-const ManageCard: React.FC<CardProps2> = ({ data, onRemove }) => {
+const MusicCenterCard: React.FC<CardProps2> = ({ data, onRemove }) => {
   return (
     <div className="card-container grid grid-cols-2 gap-8 w-full">
       {data.map((item, index) => (
@@ -37,7 +37,7 @@ const ManageCard: React.FC<CardProps2> = ({ data, onRemove }) => {
             </div>
             <div className="flex justify-between items-center">
               <p className="price text-lg font-semibold">Cover Price: ${ethers.utils.formatEther(item.artistPrice)}</p>
-              <button className="px-4 py-2 text-white bg-gradient-to-r  from-violet-500 to-fuchsia-500 focus:outline-none focus:bg-red-600" onClick={() => onRemove(Number(index))}>DELETE</button>
+              {/* <button className="px-4 py-2 text-white bg-gradient-to-r  from-violet-500 to-fuchsia-500 focus:outline-none focus:bg-red-600" onClick={() => onRemove(Number(index))}>DELETE</button> */}
             </div>
           </div>
         </div>
@@ -46,4 +46,4 @@ const ManageCard: React.FC<CardProps2> = ({ data, onRemove }) => {
   );
 };
 
-export default ManageCard;
+export default MusicCenterCard;

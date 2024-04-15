@@ -1,6 +1,6 @@
-export const SportManshipContractAddress = "0x564bB0DDDF2b65197433b1265c41e81aC17782E3" 
+export const MusicContractAddress = "0x1f842A970125A0f686ae5A990B9cf909C118f9B8" 
 
 
 
 
-//Deployed to: 0xBaee2fBda26e87E33D95711ea01bB5c9b62700a1
+//Deployed to: 0x1f842A970125A0f686ae5A990B9cf909C118f9B8

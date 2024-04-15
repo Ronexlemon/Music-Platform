@@ -3,7 +3,7 @@ import type { NextPageWithLayout } from '../_app'
 import LandLayout from "@/components/LandLayout";
 import LandingPage from "@/components/pages/LandingPage";
 import Layout from "@/components/Layout";
-import ManagePage from "@/components/pages/managepage";
+import ManagePage from "@/components/pages/ManageMusicPage";
 
 const Manage = ()=>{
   return(

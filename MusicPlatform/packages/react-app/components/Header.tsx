@@ -20,7 +20,7 @@ export default function Header() {
     }, []);
 
     return (
-        <Disclosure as="nav" className="bg-gradient-to-r  from-violet-500 to-fuchsia-500 border-b border-black">
+        <Disclosure as="nav" className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% border-b border-black">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -56,17 +56,17 @@ export default function Header() {
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                     
-                                  <Link    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/sportcenter">Sportscenter</Link>
+                                  <Link    className="inline-flex bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/musicpalace">Music Palace</Link>
                                     
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                     
-                                  <Link    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/manage">Manage</Link>
+                                  <Link    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/manage">Dashboard</Link>
                                     
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                     
-                                    <Link    className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/create">Create</Link>
+                                    <Link    className="inline-flex bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"  href="/musiccreate">Cover</Link>
                                       
                                   </div>
                             </div>
