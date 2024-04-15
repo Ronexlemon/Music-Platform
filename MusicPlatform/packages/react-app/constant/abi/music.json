@@ -1,0 +1,271 @@
+[
+	{
+		"inputs": [],
+		"name": "allArtists",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "artistId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "artistName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artistSongName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "artistOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "artistUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artistYears",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "songType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "artistPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "artistSongRate",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isReleased",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct MusicPlatform.MusicCover[]",
+				"name": "music",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "approveArtistReleased",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "artists",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "artistId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "artistName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "artistSongName",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "artistOwner",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "artistUrl",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "artistYears",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "songType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "artistPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "artistSongRate",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "isReleased",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_artistName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_artistURL",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_artistYear",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_artistSongType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_artistPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_artistSongRate",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_artistSongName",
+				"type": "string"
+			}
+		],
+		"name": "createArtistCover",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteArtistCover",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_ownerAddress",
+				"type": "address"
+			}
+		],
+		"name": "myArtists",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "artistId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "artistName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artistSongName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "artistOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "artistUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artistYears",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "songType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "artistPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "artistSongRate",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isReleased",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct MusicPlatform.MusicCover[]",
+				"name": "music",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

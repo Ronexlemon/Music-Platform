@@ -3,7 +3,7 @@ import { useAccount,useReadContract,useWriteContract } from "wagmi";
 import { useForm } from "react-hook-form";
 import { data } from "@/constant/data";
 import MarketCard, { CardData, CardProps } from "@/components/Card";
-import sportAbi from "../../constant/abi/sport.json"
+import sportAbi from "../../constant/abi/music.json"
 import { SportManshipContractAddress } from "@/constant/address";
 import { uploadImage, uploadImageAndGetUrl } from "@/upload/uploadImage";
 import cloudinary from "@/utils/cloudinary";
